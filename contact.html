@@ -9,75 +9,75 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="contact.css"/>
-		<script type="text/javascript" src="contactScript.js"></script>
-		<title>Contact</title>
-	</head>
-	<body>
-        <header class="headNavigation">
-			<a href="index.html" class="home">Home</a>
-			<a href="learnMore.html" class="learnMore">Learn More</a>
-			<a href="contact.html" class="contact">Contact</a>
-		</header>
-		<div id="wrapper">
-			<form method="post" 
-				  id="survey_form" 
-				  action="http://symlink.dk/code/php/submit/">
-				<fieldset>
-					<legend>Contact Information</legend>
-					<hr />
-					<div class="formfield">
-						<label for="fname" class="guest">Full Name:</label>
-						<input type="text" id="fname" name="fname" size="28" maxlength="15" value="" autofocus="autofocus" />					
-						<div class="dental_error error" id="fname_error">* Please enter your full name.</div>
-					</div>
-					<div class="formfield">
-						<label for="email" class="guest">Email Address:</label>
-						<input type="email" id = "email" name="email" size="30" />
-						<div class="dental_error error" id="email_error">* Please enter your email address.</div>
-					</div>
-					<div class="formfield">
-						<label for="phonenum" class="guest">Phone Number:</label>
-						<input type="tel" id="phonenum" name="phonenum" size="30"/>
-						<div class="dental_error error" id="phonenum_error">* Please enter your phone number.</div>
-					</div>
-				</fieldset>
-				<fieldset>
-					<legend>Survey</legend>
-					<hr />
-					<h3 class="surveyHeader">Do you like going to the dentist?</h3>
-					<input type="radio" name="dentalSurvey" id="yes" value="Yes" class="radioDental"/> <label for="yes">Yes</label><br />
-					<input type="radio" name="dentalSurvey" id="no" value="No" class="radioDental" /> <label for="no">No</label><br />
-					<input type="radio" name="dentalSurvey" id="scared" value="Scared" class="radioDental" /> <label for="scared">I'm too scared</label><br />
-					<input type="radio" name="dentalSurvey" id="uh" value="Uh"  class="radioDental"/> <label for="uh">Uh... what's a dentist?</label>
-					<div class="error" id="dentalSurvey_error">* Please choose a response.</div>
-					<div id="commentheading">
-					<br />
-					</div>
-				</fieldset>
-				<fieldset>
-					<legend>Additional Comments</legend>
-					<hr />
-					<label for="feedback" class="commentQuestion">Is there any other information you would like to learn about the dentist?</label><br />
-					<textarea id="feedback" name="feedback" rows="8" cols="97"></textarea>
-				</fieldset>
-				<fieldset class="buttons">
-					<hr />
-					<input type="reset" value="Clear Form" />
-					<input type="submit" value="Submit Form" />
-				</fieldset>
-			</form>
-		</div>
-        <footer class="footNavigation">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="contact.css"/>
+	<script  src="contactScript.js"></script>
+	<title>Contact</title>
+</head>
+<body>
+<header class="headNavigation">
+		<a href="index.html" class="home">Home</a>
+		<a href="learnMore.html" class="learnMore">Learn More</a>
+		<a href="contact.html" class="contact">Contact</a>
+	</header>
+	<div id="wrapper">
+	<form method="post" 
+		  id="survey_form" 
+		  action="http://symlink.dk/code/php/submit/">
+		<fieldset>
+			<legend>Contact Information</legend>
+			<hr />
+			<div class="formfield">
+				<label for="fname" class="guest">Full Name:</label>
+				<input type="text" id="fname" name="fname" size="28" autofocus="autofocus"/>					
+				<div class="dental_error error" id="fname_error">* Please enter your full name.</div>
+			</div>
+			<div class="formfield">
+				<label for="email" class="guest">Email Address:</label>
+				<input type="email" id = "email" name="email" size="30" />
+				<div class="dental_error error" id="email_error">* Please enter your email address.</div>
+			</div>
+			<div class="formfield">
+				<label for="phonenum" class="guest">Phone Number:</label>
+				<input type="tel" id="phonenum" name="phonenum" size="30"/>
+				<div class="dental_error error" id="phonenum_error">* Please enter your phone number.</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Survey</legend>
+			<hr />
+			<h3 class="surveyHeader">Do you like going to the dentist?</h3>
+			<input type="radio" name="dentalSurvey" id="yes" value="Yes" class="radioDental"/> <label for="yes">Yes</label><br />
+			<input type="radio" name="dentalSurvey" id="no" value="No" class="radioDental" /> <label for="no">No</label><br />
+			<input type="radio" name="dentalSurvey" id="scared" value="Scared" class="radioDental" /> <label for="scared">I'm too scared</label><br />
+			<input type="radio" name="dentalSurvey" id="uh" value="Uh"  class="radioDental"/> <label for="uh">Uh... what's a dentist?</label>
+			<div class="error" id="dentalSurvey_error">* Please choose a response.</div>
+			<div id="commentheading">
+			<br />
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Additional Comments</legend>
+			<hr />
+			<label for="feedback" class="commentQuestion">Is there any other information you would like to learn about the dentist?</label><br />
+			<textarea id="feedback" name="feedback" rows="8" cols="97"></textarea>
+		</fieldset>
+		<fieldset class="buttons">
+			<hr />
+			<input type="reset" value="Clear Form" />
+			<input type="submit" value="Submit Form" />
+		</fieldset>
+	</form>
+	</div>
+	<footer class="footNavigation">
 			<a href="index.html" class="finalFoot">Home</a>
 			<a href="learnMore.html" class="finalFoot">Learn More</a>
-			<a href="contact.html" class="finalFoot">Contact</a></br>
-            <small>
-                Copyright &copy; 
-                <a href="#">2022 Sofia Soriano</a>
-            </small>
-		</footer>
+			<a href="contact.html" class="finalFoot">Contact</a>
+	    <small><br>
+		Copyright &copy; 
+		<a href="#">2022 Sofia Soriano</a>
+	    </small>
+	</footer>
 	</body>
 </html>

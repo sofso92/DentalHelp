@@ -1,11 +1,5 @@
-/*
-	Project 3 Form Validation
-	April 23 2022
-	Sofia Soriano
- */
-
- body
- {
+body
+{
     max-width: 1700px;
     min-width: 1400px;
     margin-left: auto;
@@ -13,14 +7,14 @@
     width: 60%;
     background-color: #FEF2F2;
     padding: 20px;
- }
+}
 
- html
- {
-    background-color: #E4C2C1;
- }
+html
+{
+background-color: #E4C2C1;
+}
 
- .headNavigation
+.headNavigation
 {
     background-color: #B6666F;
     width: 100%;
@@ -68,8 +62,8 @@ footer
 #wrapper
 {
     width: 750px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: auto;
+    padding: 20px;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -95,7 +89,6 @@ legend
 {
     text-transform: uppercase;
     font-weight: bold;
-    padding-bottom: px;
     font-size: 14pt;
 }
 
@@ -123,7 +116,6 @@ input[type=text], input[type=submit], input[type=reset]
 
 .formfield
 {
-    float: left;
     width: 70%;
     text-align: right;
     padding-bottom: 1%;

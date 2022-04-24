@@ -1,9 +1,4 @@
-/*
-	Project 3 Form Validation
-	April 23 2022
-	Sofia Soriano
- */
-    
+
 function validate(e)
 {
     hideAllErrors();
@@ -32,15 +27,15 @@ function resetForm(e){
     return false;
 }
 
-function showError(formField, errorId, errorFlag)
-{
-    document.getElementById(errorId).style.display = "block";
-    
+function showError(formField, errorFlag)
+{   
     if ( !errorFlag )
     {
-        formField.focus();
+       /* , errorId document.getElementById(errorId).style.display = "block";
+
+        formField.focus();*/
         
-        if ( formField.type == "text" )
+        if ( formField.type == "text" && formField.type == "email" && formField.type == "tel" )
         {
             formField.select();
         }		
@@ -51,6 +46,7 @@ function formHasErrors(){
 
     let errorFlag = false;
 	let requiredFields = ["fname","email","phonenum"];
+
 	for(let i=0;i<requiredFields.length;i++)
 	{
 		let textField = document.getElementById(requiredFields[i]);
@@ -88,10 +84,10 @@ function formHasErrors(){
 		document.getElementById("email_error").style.visibility = "visible";
 	}
 
-	let regexTwo = new RegExp(/^[a-zA-Z]+$/g);
-	let nameValue = document.getElementById("fname").value;
+	let secondRegex = new RegExp(/^[a-zA-Z]+$/g);
+	let fullnameValue = document.getElementById("fname").value;
 
-	if(!regexTwo.test(nameValue))
+	if(!secondRegex.test(fullnameValue))
 	{
 		document.getElementById("fname_error").style.display = "block";
 
@@ -105,13 +101,13 @@ function formHasErrors(){
 	}
 	else
 	{
-		document.getElementById("fname_error").style.visibility = "hidden";
+		document.getElementById("fname_error").style.visibility = "visible";
 	}
 	
-	let regexThree = new RegExp(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/);
+	let thirdRegex = new RegExp(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/);
 	let phoneNumValue = document.getElementById("phonenum").value;
 
-	if(!regexThree.test(phoneNumValue))
+	if(!thirdRegex.test(phoneNumValue))
 	{
 		document.getElementById("phonenum_error").style.display = "block";
 
@@ -126,20 +122,19 @@ function formHasErrors(){
 	else
 	{
 		document.getElementById("phone_error").style.visibility = "hidden";
-
 	}
 
-    let program = ["yes","no","scared","uh"];
+    let options = ["yes","no","scared","uh"];
+    let optionChecked = false;
 
-    let programChecked = false;
-    for(let i=0;i<program.length && !programChecked;i++)
+    for(let i=0;i<options.length && !optionChecked;i++)
     {
-        if(document.getElementById(program[i]).checked)
+        if(document.getElementById(options[i]).checked)
         {
-            programChecked = true;
+            optionChecked = true;
         }
     }
-    if(!programChecked)
+    if(!optionChecked)
     {
         document.getElementById("dental_error").style.display = "block";
         errorFlag = true;
@@ -175,7 +170,7 @@ function formFieldHasInput(fieldElement){
     return true;
 }
 
-/**
+/*
  * Handles the load event of the document.
  */
 function load(){

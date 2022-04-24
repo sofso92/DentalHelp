@@ -18,7 +18,7 @@ function validate(e)
 }
 
 function resetForm(e){
-    if ( confirm('Do you want to Clear the survey?') )
+    if ( confirm('Do you want to Clear the form?') )
     {
         hideAllErrors();
         
